@@ -13,7 +13,7 @@ def pour_problem(X, Y, goal, start=(0, 0)):
         for(state, action) in successors(x, y, X, Y).items():
             if state not in explored:
                 explored.add(state)
-                path2 = path + [action, start]
+                path2 = path + [action, state]
                 if goal in state:
                     return path2
                 else:
